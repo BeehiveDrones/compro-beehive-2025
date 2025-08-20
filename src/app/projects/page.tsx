@@ -1,26 +1,27 @@
-'use client';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { ListProject } from './components/ListProject';
-import { useEffect, useRef, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
 
-export default function OurProjects() {  
+"use client";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { ListProject } from "./components/ListProject";
+import { Suspense, useEffect, useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
+
+function ProjectsContent() {
   const listRef = useRef<HTMLDivElement>(null);
   const searchParams = useSearchParams();
   const [hover, setHover] = useState(false);
 
   useEffect(() => {
-    const selected = searchParams.get('selected');
-    const sub = searchParams.get('sub');
+    const selected = searchParams.get("selected");
+    const sub = searchParams.get("sub");
     if ((selected || sub) && listRef.current) {
-      listRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      listRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [searchParams]);
 
   return (
-    <section className="py-10 px-6 md:px-20 mt-10">
-      <motion.h2 
+    <>
+      <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -38,7 +39,12 @@ export default function OurProjects() {
         whileTap={{ scale: 0.9 }}
         transition={{ type: "spring", stiffness: 400, damping: 17 }}
       >
-        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <a
+          href="https://wa.me/6281234567890"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat on WhatsApp"
+        >
           <Image
             src="/images/whatsapp.logo.png"
             alt="WhatsApp Logo"
@@ -61,7 +67,7 @@ export default function OurProjects() {
         efficiency, safety, and sustainability. We&apos;ve also supported medical deliveries to remote areas and environmental monitoring.
         Committed to innovation and impact, we continue to push technological boundaries for a better Indonesia.
       </motion.p>
-      
+
       {/* Gambar → Video saat hover */}
       <div className="flex justify-center">
         <motion.div
@@ -92,10 +98,20 @@ export default function OurProjects() {
           )}
         </motion.div>
       </div>
-      
+
       <div ref={listRef} id="project-list">
         <ListProject />
       </div>
+    </>
+  );
+}
+
+export default function OurProjects() {
+  return (
+    <section className="py-10 px-6 md:px-20 mt-10">
+      <Suspense fallback={null}>
+        <ProjectsContent />
+      </Suspense>
     </section>
   );
 }
