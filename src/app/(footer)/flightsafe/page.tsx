@@ -15,7 +15,7 @@ const tips: Tip[] = [
   },
   {
     img: '/icons/12.png',
-    text: 'Always fly in open areas and keep your drone within visual line of sight. For safety reasons, you should never fly above people, animals, or moving vehicles.',
+    text: 'Always fly in open areas and keep your drone within visual line of sight. ',
     detail: 'Flying in open areas reduces the risk of accidents. Always keep your drone where you can see it, and avoid flying over crowds, animals, or moving vehicles.'
   },
   {
@@ -53,8 +53,8 @@ const tips: Tip[] = [
 export default function FlightSafetyTips() {
   return (
     <section className="px-4 py-10 max-w-7xl mx-auto text-center text-[#1e3a8a] font-exo2 bg-white">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 mt-10">Flight Safety Tips</h2>
-      <p className="mb-8 text-gray-700">
+      <h2 className="text-3xl md:text-4xl font-exo2 font-bold mb-4 mt-10">Flight Safety Tips</h2>
+      <p className="mb-8 text-gray-700 font-open-sans">
         Beehive Drones is dedicated to helping pilots maximize their aerial potential safely and
         responsibly. This page provides essential safety tips, regulatory resources, and instructional
         guides to ensure a smooth and compliant flight experience.
@@ -74,14 +74,14 @@ export default function FlightSafetyTips() {
                 height={60}
                 className="object-contain transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
               />
-              <p className="text-sm text-gray-800 font-semibold">{tip.text}</p>
-              <p className="text-xs text-gray-600 hidden md:block">{tip.detail}</p>
+              <p className="text-sm text-gray-800 font-semibold font-exo2">{tip.text}</p>
+              <p className="text-xs text-gray-600 hidden md:block font-open-sans">{tip.detail}</p>
             </div>
           ))}
         </div>
       </div>
 
-      <p className="mt-10 text-sm text-gray-600 leading-relaxed">
+      <p className=" font-open-sans mt-10 text-sm text-gray-600 leading-relaxed ">
         Learn more about flight restrictions, safety protocols, and best practices to operate your drone
         with confidence. While we strive to offer comprehensive guidance, safety ultimately depends on
         your judgment as a pilot. As a Beehive Drones operator, you are responsible for ensuring all

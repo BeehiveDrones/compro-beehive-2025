@@ -97,7 +97,7 @@ export default function ProductShowcase() {
       }}
     >
       <div className="text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mt-10 hover:scale-105 transition-transform duration-300">
+        <h2 className="text-3xl md:text-4xl font-exo2 font-bold text-[#1e3a8a] mt-10 hover:scale-105 transition-transform duration-300">
           REDEFINING THE POSSIBILITIES
         </h2>
       </div>
@@ -121,8 +121,8 @@ function ProductCard({ id, isVisible }: { id: number; isVisible: boolean }) {
     >
       <div className="absolute inset-0 z-10 flex flex-col justify-between p-6 text-white">
         <div>
-          <h3 className="text-2xl font-bold mb-1 ml-4">{product.title}</h3>
-          <p className="text-sm mb-3 ml-4">{product.desc}</p>
+          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-exo2 font-semibold mb-1 ml-4">{product.title}</h3>
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg font-open-sans mb-3 ml-4">{product.desc}</p>
         </div>
         <motion.a
           href={`https://www.youtube.com/watch?v=${product.video}`}
@@ -134,7 +134,7 @@ function ProductCard({ id, isVisible }: { id: number; isVisible: boolean }) {
             x: 5
           }}
           whileTap={{ scale: 0.95 }}
-          className="inline-flex items-center ml-4 gap-2 px-4 py-2 bg-white text-[#134280] text-sm font-semibold rounded transition w-fit"
+          className="text-xs sm:text-sm md:text-base lg:text-lg inline-flex items-center ml-4 gap-2 px-4 py-2 bg-white font-exo2 text-[#134280] font-semibold rounded transition w-fit"
         >
           Watch video
           <motion.svg 

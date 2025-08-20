@@ -1,8 +1,16 @@
-import "@/app/globals.css"; // Pastikan file CSS global ada
+// app/layout.tsx
+import "@/app/globals.css";
 import Appshell from "@/components/layouts/Appshell";
-import { Exo_2 } from "next/font/google";
+import { Exo_2, Open_Sans } from "next/font/google";
 
-// Konfigurasi font Exo 2 dari Google Fonts
+// Import font
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  variable: "--font-open-sans",
+  display: "swap",
+});
+
 const exo2 = Exo_2({
   subsets: ["latin"],
   weight: ["400", "700", "800"],
@@ -10,25 +18,23 @@ const exo2 = Exo_2({
   display: "swap",
 });
 
-// Metadata halaman
+// Metadata
 export const metadata = {
   title: "Beehive Drones",
   description: "Company Profile",
 };
 
-// Layout root untuk semua halaman
+// Layout
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={exo2.variable}>
+    <html lang="en" className={`${openSans.variable} ${exo2.variable}`}>
       <head>
-        {/* link ke Bootstrap Icons CDN */}
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
         />
       </head>
-      {/* footer sama navbar */}
-      <body className="font-exo2">
+      <body className="font-exo2 font-open-sans">
         <Appshell>{children}</Appshell>
       </body>
     </html>

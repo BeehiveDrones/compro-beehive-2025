@@ -150,7 +150,7 @@ export default function PaymentMethodModal({
                 </div>
               )}
             </div>
-            {/* Other Payment Methods */}
+            {/* Other Payment Methods
             <div 
               className={`p-4 rounded-lg cursor-pointer transition-all duration-200 ${
                 selectedPaymentMethod === 'Other Payment Methods' ? 'border-2 border-[#1e3a8a] ring-2 ring-[#1e3a8a]' : 'border border-gray-200 hover:border-gray-300'
@@ -179,7 +179,7 @@ export default function PaymentMethodModal({
                 <div className="mt-4 text-sm text-gray-600 animate-fadeIn">
                 </div>
               )}
-            </div>
+            </div> */}
           </div>
         </div>
         {/* Right Section: Order Summary */}

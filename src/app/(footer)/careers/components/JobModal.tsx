@@ -22,9 +22,10 @@ interface JobModalProps {
 }
 
 const defaultBenefits = [
-  'Direct mentorship from senior designers.',
-  'Certificate + professional reference upon completion.',
-  'Potential full-time employment opportunity.'
+  'BPJS Employment & Health Insurance',
+'Annual leave and national holidays',
+'Work-from-home flexibility',
+'5-day workweek',
 ];
 
 const defaultResponsibilities = [
@@ -46,7 +47,7 @@ export default function JobModal({ job, onClose }: JobModalProps) {
   const benefits = job.benefits && job.benefits.length > 0 ? job.benefits : defaultBenefits;
   const responsibilities = job.responsibilities && job.responsibilities.length > 0 ? job.responsibilities : defaultResponsibilities;
   const requirements = job.requirements && job.requirements.length > 0 ? job.requirements : defaultRequirements;
-  const duration = job.duration || '3-6 months (flexible)';
+  const duration = job.duration || 'Before July 14, 2025';
   const location = job.location || 'Hybrid (Yogyakarta Office + Remote)';
 
   return (
@@ -54,20 +55,20 @@ export default function JobModal({ job, onClose }: JobModalProps) {
       <div className="relative bg-white rounded-lg shadow-xl w-full max-w-5xl min-h-[60vh] max-h-[95vh] flex flex-col p-2 sm:p-4 md:p-8 overflow-y-auto animate-fadeIn">
         {/* Header */}
         <div className="flex-1 min-w-0">
-          <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-[#1e3a8a] mb-2 break-words">{job.title}</h2>
-          <p className="text-gray-700 mb-6 text-sm sm:text-base md:text-lg break-words">
+          <h2 className="text-lg sm:text-2xl font-exo2 md:text-3xl font-bold text-[#1e3a8a] mb-2 break-words">{job.title}</h2>
+          <p className="text-gray-700 mb-6 text-sm font-open-sans sm:text-base md:text-lg break-words">
             {job.shortDescription}
           </p>
         </div>
         {/* Position Details */}
         <div className="mt-6 sm:mt-8">
-          <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#1e3a8a] mb-4">Position Details</h3>
+          <h3 className="text-base sm:text-lg font-exo2 md:text-xl font-bold text-[#1e3a8a] mb-4">Position Details</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
             {/* Responsibilities kiri */}
             <div>
               <div className="mb-4">
-                <span className="font-bold">Responsibilities:</span>
-                <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1 text-sm sm:text-base">
+                <span className="font-bold font-exo2">Qualifications:</span>
+                <ul className="list-disc list-inside font-open-sans text-gray-700 mt-2 space-y-1 text-sm sm:text-base">
                   {responsibilities.map((item, idx) => (
                     <li key={idx}>{item}</li>
                   ))}
@@ -75,12 +76,12 @@ export default function JobModal({ job, onClose }: JobModalProps) {
               </div>
               {/* Location & Duration tampilan desktop */}
               <div className="hidden md:flex flex-col gap-2 mt-8 sm:mt-20">
-                <div className="flex items-center gap-2 text-gray-700 text-xs sm:text-sm md:text-base">
+                <div className="flex items-center font-open-sans gap-2 text-gray-700 text-xs sm:text-sm md:text-base">
                   <FaMapMarkerAlt className="text-[#1e3a8a]" />
                   <span className="font-medium">Location</span>
                   <span className="ml-1">: {location}</span>
                 </div>
-                <div className="flex items-center gap-2 text-gray-700 text-xs sm:text-sm md:text-base">
+                <div className="flex items-center gap-2 text-gray-700 font-open-sans text-xs sm:text-sm md:text-base">
                   <FaRegClock className="text-[#1e3a8a]" />
                   <span className="font-medium">Duration</span>
                   <span className="ml-1">: {duration}</span>
@@ -90,16 +91,16 @@ export default function JobModal({ job, onClose }: JobModalProps) {
             {/* Benefits & Requirements kanan */}
             <div>
               <div className="mb-4">
-                <span className="font-bold">Benefits:</span>
-                <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1 text-sm sm:text-base">
+                <span className="font-bold font-exo2">Benefits:</span>
+                <ul className="list-disc font-open-sans list-inside text-gray-700 mt-2 space-y-1 text-sm sm:text-base">
                   {benefits.map((item, idx) => (
                     <li key={idx}>{item}</li>
                   ))}
                 </ul>
               </div>
               <div className="mb-4">
-                <span className="font-bold">Requirements:</span>
-                <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1 text-sm sm:text-base">
+                <span className="font-bold font-exo2">key Responsibilities:</span>
+                <ul className="list-disc font-open-sans list-inside text-gray-700 mt-2 space-y-1 text-sm sm:text-base">
                   {requirements.map((item, idx) => (
                     <li key={idx}>{item}</li>
                   ))}
@@ -108,13 +109,13 @@ export default function JobModal({ job, onClose }: JobModalProps) {
               {/* Location & Duration hanya di mobile */}
               <div className="flex flex-col gap-2 mt-6 md:hidden">
                 <div className="flex items-center gap-2 text-gray-700 text-xs sm:text-sm md:text-base">
-                  <FaMapMarkerAlt className="text-[#1e3a8a]" />
+                  <FaMapMarkerAlt className="text-[#1e3a8a] font-open-sans" />
                   <span className="font-medium">Location</span>
                   <span className="ml-1">: {location}</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-700 text-xs sm:text-sm md:text-base">
-                  <FaRegClock className="text-[#1e3a8a]" />
-                  <span className="font-medium">Duration</span>
+                  <FaRegClock className="text-[#1e3a8a] font-open-sans" />
+                  <span className="font-medium font-exo2">Duration</span>
                   <span className="ml-1">: {duration}</span>
                 </div>
               </div>
@@ -130,7 +131,7 @@ export default function JobModal({ job, onClose }: JobModalProps) {
             Back
           </button>
           <a
-            href={`https://wa.me/6281234567890?text=Halo%20HR%20Beehive%20Drones,%20saya%20ingin%20melamar%20posisi%20${encodeURIComponent(job.title)}`}
+            href={`https://wa.me/6287777257911?text=Halo%20HR%20Beehive%20Drones,%20saya%20ingin%20melamar%20posisi%20${encodeURIComponent(job.title)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-2 rounded bg-[#1e3a8a] text-white font-semibold hover:bg-blue-900 transition w-full sm:w-auto text-center"

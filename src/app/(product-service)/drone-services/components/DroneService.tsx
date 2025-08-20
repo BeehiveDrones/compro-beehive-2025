@@ -40,7 +40,7 @@ export default function DroneServices() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1e3a8a] mb-2 text-center md:text-left"
+        className="text-3xl sm:text-4xl lg:text-5xl font-exo2 font-bold text-[#1e3a8a] mb-2 text-center md:text-left"
       >
         Drone Services
       </motion.h2>
@@ -49,9 +49,9 @@ export default function DroneServices() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
         viewport={{ once: true }}
-        className="text-base sm:text-lg text-[#1e3a8a] mb-6 sm:mb-8 md:mb-10 font-medium text-center md:text-left"
+        className="text-base text-xs sm:text-sm md:text-base lg:text-lg font-open-sans text-[#1e3a8a] mb-6 sm:mb-8 md:mb-10 font-medium text-center md:text-left"
       >
-        <span className="text-[#1e3a8a] font-semibold">
+        <span className="text-xs sm:text-sm md:text-base lg:text-lg text-[#1e3a8a] font-open-sans font-semibold">
           Precision in Every Flight, Excellence in Every Result.
         </span>
         <br />
@@ -86,10 +86,10 @@ export default function DroneServices() {
       </motion.div>
     </div>
     <div className="w-full md:w-1/2 md:px-6 lg:px-12 text-center md:text-left">
-      <h3 className="text-xl sm:text-2xl font-bold text-[#1e3a8a] mb-2">
+      <h3 className="text-xl sm:text-2xl font-exo2 font-bold text-[#1e3a8a] mb-2">
         {service.title}
       </h3>
-      <p className="text-sm sm:text-base text-gray-700 mb-4 sm:mb-6">
+      <p className="text-sm sm:text-base font-open-sans text-gray-700 mb-4 sm:mb-6">
         {service.description}
       </p>
     </div>

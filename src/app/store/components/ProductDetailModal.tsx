@@ -121,7 +121,7 @@ export default function ProductDetailModal({
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <span className="text-gray-500">Type</span>
-                    <span className="block font-medium">{selectedProduct.type || 'N/A'}</span>
+                    <span className="block font-medium ">{selectedProduct.type || 'N/A'}</span>
                   </div>
                   <div>
                     <span className="text-gray-500">Wingspan</span>
@@ -145,15 +145,26 @@ export default function ProductDetailModal({
                   </div>
                 </div>
               </div>
+              {/* Include Section */}
+              {selectedProduct.include && selectedProduct.include.length > 0 && (
+                <div className="mt-6 space-y-2">
+                  <h3 className="font-semibold text-lg text-gray-800 mb-2">Include</h3>
+                  <ul className="list-disc list-inside text-gray-600">
+                    {selectedProduct.include.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
               {/* Choose Camera Section */}
-              {selectedProduct.cameras && selectedProduct.cameras.length > 0 && (
+              {selectedProduct.name === 'BVD-V25' && selectedProduct.cameras && selectedProduct.cameras.length > 0 && (
                 <div className="mt-6">
                   <h3 className="font-semibold text-lg text-[#1e3a8a] mb-2">Camera Options</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {selectedProduct.cameras?.map((camera: { name: string; description: string }, index: number) => {
                       let cameraPrice = '';
-                      if (index === 0) cameraPrice = 'Rp1.000.000';
-                      if (index === 1) cameraPrice = 'Rp2.000.000';
+                      if (index === 0) cameraPrice = 'Rp279.300.000';
+                      if (index === 1) cameraPrice = 'Rp575.100.000';
                       return (
                         <div
                           key={index}

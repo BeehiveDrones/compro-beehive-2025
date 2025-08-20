@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+
 @import "tailwindcss";
 
 
@@ -16,23 +18,276 @@
 }
 
 body {
-  max-width: 100w;
+  /* max-width: 100vw; */ /* Hapus jika tidak diperlukan */
   overflow: hidden;
-  font-family: arial;
+  font-family: 'Exo 2';
 
+
+}
+p {
+  font-family: 'Open Sans';
 }
 .navbar {
   display: flex;
   width: 100%;
-  height: 50px; /* Ubah dari 100px atau lebih menjadi lebih kecil */
+  height: 50px; 
   background-color: #134280;
   color: #ffffff;
   align-items: center;
-  padding: 0 10rem; /* Ubah padding supaya tidak terlalu tinggi */
-  justify-content: center; /* Tengahin teks */
+  padding: 0 10rem; 
+  justify-content: center;
+  font-family: "Open Sans"; 
 }
 body, html {
   overflow-x: hidden; /* hanya horizontal yang dibatasi */
   overflow-y: auto;   /* scroll vertikal aktif */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.footer {
+  font-family: 'Open Sans';
+}
+
+.navbar-responsive {
+  transition: all 0.3s ease;
+}
+
+/* HP Kecil (320px - 480px) */
+@media (max-width: 480px) {
+  .navbar-responsive {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .navbar-responsive .logo {
+    width: 60px;
+    height: auto;
+  }
+  
+  .navbar-responsive .mobile-menu-button {
+    padding: 0.25rem;
+  }
+  
+  .navbar-responsive .mobile-menu {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+  
+  .navbar-responsive .mobile-buttons {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem;
+  }
+}
+
+/* HP Besar (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .navbar-responsive {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .navbar-responsive .logo {
+    width: 80px;
+    height: auto;
+  }
+  
+  .navbar-responsive .mobile-menu {
+    font-size: 0.875rem;
+    padding: 1rem;
+  }
+  
+  .navbar-responsive .mobile-buttons {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* iPad Mini dan Tablet (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar-responsive {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .navbar-responsive .logo {
+    width: 96px;
+    height: auto;
+  }
+  
+  .navbar-responsive .desktop-menu {
+    gap: 0.75rem;
+  }
+  
+  .navbar-responsive .menu-item {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+  
+  .navbar-responsive .dropdown {
+    width: 11rem;
+  }
+  
+  .navbar-responsive .desktop-buttons {
+    gap: 0.5rem;
+  }
+  
+  .navbar-responsive .button {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* PC/Laptop (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .navbar-responsive {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .navbar-responsive .logo {
+    width: 112px;
+    height: auto;
+  }
+  
+  .navbar-responsive .desktop-menu {
+    gap: 1.5rem;
+  }
+  
+  .navbar-responsive .menu-item {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  
+  .navbar-responsive .dropdown {
+    width: 13rem;
+  }
+  
+  .navbar-responsive .desktop-buttons {
+    gap: 0.75rem;
+  }
+  
+  .navbar-responsive .button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* TV dan Monitor Besar (1441px+) */
+@media (min-width: 1441px) {
+  .navbar-responsive {
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+  }
+  
+  .navbar-responsive .logo {
+    width: 128px;
+    height: auto;
+  }
+  
+  .navbar-responsive .desktop-menu {
+    gap: 2rem;
+  }
+  
+  .navbar-responsive .menu-item {
+    padding: 0.625rem 1.25rem;
+    font-size: 1.125rem;
+  }
+  
+  .navbar-responsive .dropdown {
+    width: 14rem;
+  }
+  
+  .navbar-responsive .desktop-buttons {
+    gap: 1rem;
+  }
+  
+  .navbar-responsive .button {
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+  }
+}
+
+/* Hover effects yang responsif */
+@media (hover: hover) {
+  .navbar-responsive .menu-item:hover,
+  .navbar-responsive .button:hover {
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+  .navbar-responsive .menu-item,
+  .navbar-responsive .button {
+    min-height: 44px; /* Minimum touch target size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Landscape orientation untuk mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .navbar-responsive {
+    padding: 0.25rem 1rem;
+  }
+  
+  .navbar-responsive .mobile-menu {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .navbar-responsive .logo {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .navbar-responsive * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles untuk keyboard navigation */
+.navbar-responsive button:focus,
+.navbar-responsive a:focus {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+/* Smooth scrolling untuk mobile menu */
+.navbar-responsive .mobile-menu {
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal scroll */
+.navbar-responsive {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+
+
+
+@layer base {
+  html {
+    font-family: var(--font-open-sans), sans-serif;
+  }
 }
 

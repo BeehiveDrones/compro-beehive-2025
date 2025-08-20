@@ -34,7 +34,7 @@ export default function Desc() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-6 md:mb-8"
+        className="text-3xl md:text-4xl font-exo2 font-bold text-[#1e3a8a] mb-6 md:mb-8"
       >
         Advanced Manufacturing
       </motion.h2>
@@ -42,7 +42,7 @@ export default function Desc() {
         initial={{ opacity: 0 }}
         animate={{ opacity: isVisible ? 1 : 0 }}
         transition={{ duration: 0.2, delay: 0.2 }}
-        className="text-[#1e3a8a] mx-auto space-y-4 md:space-y-6"
+        className="text-[#1e3a8a] font-open-sans mx-auto space-y-4 md:space-y-6"
       >
         <motion.p
           whileHover={{ x: 5 }}

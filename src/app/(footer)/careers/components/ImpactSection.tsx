@@ -35,16 +35,16 @@ export default function ImpactSection() {
   return (
     <section className="container mx-auto px-4 sm:px-6 py-8 md:py-12 bg-white">
       <AnimatedSection>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-4 text-center sm:text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-exo2 font-bold text-[#1e3a8a] mb-4 text-center sm:text-center">
           Make an Impact
         </h2>
-        <p className="text-gray-700  leading-relaxed max-w-4xl mx-auto mb-4 text-sm sm:text-base">
+        <p className="text-gray-700 text-center leading-relaxed max-w-4xl font-open-sans mx-auto mb-4 text-sm sm:text-base">
           On a daily basis, Beehive Drones employees work on programs and projects with the potential to notably impact our lives. Our employees take pride in solving hard problems that can have tangible impacts on our future.
         </p>
       </AnimatedSection>
       <AnimatedSection delay={200}>
         <div className="relative mb-8 sm:mb-12 mt-12 sm:mt-20 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1e3a8a] inline-block">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-exo2 font-bold text-[#1e3a8a] inline-block">
             Our Corporate Culture
           </h2>
         </div>
@@ -79,7 +79,7 @@ export default function ImpactSection() {
                 {item.letter}
               </motion.div>
               <motion.p 
-                className={`text-xs sm:text-sm font-sans uppercase text-[#1e3a8a] text-center max-w-[100px] sm:max-w-[120px] mx-auto transition-all duration-300 ${
+                className={`text-xs sm:text-sm font-open-sans uppercase text-[#1e3a8a] text-center max-w-[100px] sm:max-w-[120px] mx-auto transition-all duration-300 ${
                   isMobile || activeItem === index 
                     ? 'opacity-100 translate-y-0' 
                     : 'opacity-0 translate-y-4'

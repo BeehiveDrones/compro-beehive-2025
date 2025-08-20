@@ -45,7 +45,7 @@ export default function WorkWithUs() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="text-3xl sm:text-4xl font-bold text-[#1e3a8a] mb-2"
+        className="text-3xl font-exo2 sm:text-4xl font-bold text-[#1e3a8a] mb-2"
       >
         Why Work With Us?
       </motion.h2>
@@ -54,7 +54,7 @@ export default function WorkWithUs() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.1 }}
         viewport={{ once: true }}
-        className="text-lg sm:text-xl font-semibold text-[#1e3a8a] mb-6 sm:mb-8 md:mb-10"
+        className="text-lg sm:text-xl font-exo2 font-semibold text-[#1e3a8a] mb-6 sm:mb-8 md:mb-10"
       >
         Find out the benefits.
       </motion.p>
@@ -79,7 +79,7 @@ export default function WorkWithUs() {
               className="absolute top-0 left-0 w-full h-1 bg-[#1e3a8a] opacity-0"
               animate={{ opacity: activeIndex === index ? 1 : 0 }}
             />
-            <h3 className="text-xl font-bold text-[#1e3a8a] mb-2">{item.title}</h3>
+            <h3 className="text-xl font-exo2 font-bold text-[#1e3a8a] mb-2">{item.title}</h3>
             <motion.div whileHover={{ rotate: 10 }} transition={{ type: 'spring' }}>
               <Image
                 src={item.icon}
@@ -89,21 +89,22 @@ export default function WorkWithUs() {
                 className="mx-auto my-4 object-contain w-24 h-24 sm:w-30 sm:h-30"
               />
             </motion.div>
-            <p className="text-sm sm:text-base text-[#1e3a8a]">{item.description}</p>
+            <p className="text-sm sm:text-base text-[#1e3a8a] font-open-sans">{item.description}</p>
           </motion.div>
         ))}
       </div>
-      <motion.button
+      <motion.a
+      href="/contact-us"
         whileHover={{
           scale: 1.05,
           boxShadow: "0 5px 15px rgba(30, 58, 138, 0.4)",
         }}
         whileTap={{ scale: 0.95 }}
         transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-        className="text-sm sm:text-base bg-[#1e3a8a] text-white font-semibold shadow px-5 py-2 sm:px-6 sm:py-3 rounded hover:bg-[#163e7a] transition"
+        className="text-sm sm:text-base bg-[#1e3a8a] text-white font-semibold shadow px-5 py-2 sm:px-6 sm:py-3 rounded hover:bg-[#163e7a] transition font-open-sans"
       >
         Consult With Us
-      </motion.button>
+      </motion.a>
     </section>
   );
 }

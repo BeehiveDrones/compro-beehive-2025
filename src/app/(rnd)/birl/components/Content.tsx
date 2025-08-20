@@ -29,7 +29,7 @@ export default function Content() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.25 }}
         viewport={{ once: true }}
-        className="text-3xl sm:text-4xl font-bold mb-1"
+        className="text-3xl sm:text-4xl font-exo-2 font-bold mb-1"
       >
         BIRL
       </motion.h1>
@@ -39,7 +39,7 @@ export default function Content() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
         viewport={{ once: true }}
-        className="text-sm font-bold text-[#1e3a8a] tracking-wide mb-6"
+        className="text-sm font-bold text-[#1e3a8a] tracking-wide mb-6 font-exo2"
       >
         REDEFINING THE POSSIBILITIES
       </motion.h2>
@@ -49,7 +49,7 @@ export default function Content() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true }}
-        className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4"
+        className="text-xl sm:text-2xl md:text-3xl font-bold font-exo2 text-center mb-4"
       >
         Welcome to Beehive Intelligent Robotics Laboratory!
       </motion.h3>
@@ -59,7 +59,7 @@ export default function Content() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.3 }}
         viewport={{ once: true }}
-        className="text-base text-gray-700 text-justify mb-8 sm:mb-10"
+        className="text-base text-gray-700 text-justify mb-8 sm:mb-10  font-open-sans "
       >
         Welcome to the Beehive Intelligent Robotics Laboratory (BIRL), an
         integral part of Beehive Drones company. As an academic arm of Beehive
@@ -105,16 +105,16 @@ export default function Content() {
               </motion.p>
               <ul className="list-disc list-inside text-sm text-gray-800 space-y-1">
                 <li>
-                  <span className="font-semibold">Publisher:</span> {pub.details.publisher}
+                  <span className="font-semibold font-open-sans">Publisher:</span> {pub.details.publisher}
                 </li>
                 <li>
-                  <span className="font-semibold">Authors:</span> {pub.details.authors}
+                  <span className="font-semibold font-open-sans">Authors:</span> {pub.details.authors}
                 </li>
                 <li>
-                  <span className="font-semibold">DOI:</span>{' '}
+                  <span className="font-semibold font-open-sans">DOI:</span>{' '}
                   <motion.a 
                     href="#" 
-                    className="text-blue-600 hover:underline"
+                    className="text-black"
                     whileHover={{ x: 2 }}
                   >
                     {pub.details.doi}

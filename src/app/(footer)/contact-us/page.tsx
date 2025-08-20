@@ -2,27 +2,19 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import {
+  Phone,
   Mail,
   MapPin,
-  Phone,
   Instagram,
   Linkedin,
   Youtube,
   Music2,
 } from 'lucide-react';
-
-type FormFields = {
-  name: string;
-  whatsapp: string;
-  email: string;
-  address: string;
-  requirements: string;
-};
+import Form from './components/form';
 
 export default function AboutPage() {
   return (
     <>
-      {/* SECTION MAP – GOOGLE MAPS FULL WIDTH */}
       <section className="w-full h-[250px] mt-13 overflow-hidden">
         <FullScreenMap />
       </section>
@@ -56,96 +48,35 @@ function FullScreenMap() {
 }
 
 function Contact() {
-  const [form, setForm] = useState<FormFields>({
-    name: '',
-    whatsapp: '',
-    email: '',
-    address: '',
-    requirements: '',
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', form);
-    // TODO: send form data
-  };
-
   return (
     <section className="w-full px-4 py-12 md:py-16 bg-white text-[#1e3a8a] font-exo2">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Form Section */}
-        <div>
-          <h2 className="text-2xl font-bold mb-1">Drop Us a Line</h2>
-          <p className="mb-6 text-gray-700">Consult with us about your needs.</p>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            {(['name', 'whatsapp', 'email', 'address'] as (keyof FormFields)[]).map((field) => (
-              <div key={field}>
-                <label htmlFor={field} className="block font-semibold mb-1 capitalize">
-                  {field}
-                </label>
-                <input
-                  type="text"
-                  name={field}
-                  value={form[field]}
-                  onChange={handleChange}
-                  className="w-full border border-[#1e3a8a] p-2 rounded outline-none focus:ring-2 focus:ring-[#1e3a8a]"
-                />
-              </div>
-            ))}
-
-            <div>
-              <label className="block font-semibold mb-1" htmlFor="requirements">
-                Requirements
-              </label>
-              <textarea
-                name="requirements"
-                value={form.requirements}
-                onChange={handleChange}
-                className="w-full border border-[#1e3a8a] p-2 rounded h-32 resize-none outline-none focus:ring-2 focus:ring-[#1e3a8a]"
-              />
-            </div>
-
-            <motion.button
-              whileTap={{ scale: 0.95 }}
-              whileHover={{ scale: 1.02 }}
-              type="submit"
-              className="bg-[#1e3a8a] text-white font-semibold px-6 py-2 rounded hover:bg-[#274caa] transition"
-            >
-              Submit
-            </motion.button>
-          </form>
-        </div>
+        <Form />
 
         {/* Contact Info Section */}
         <div className="space-y-6">
-          <h2 className="text-2xl font-bold">Get in Touch</h2>
-          <p className="text-gray-700">
+          <h2 className="text-2xl font-bold font-exo2">Get in Touch</h2>
+          <p className="text-gray-700 font-open-sans">
             WE&apos;RE ALWAYS HAPPY TO HELP. Get in touch with us today!
           </p>
 
           <div className="flex items-start gap-3">
-            <Phone className="w-5 h-5 mt-1 text-[#1e3a8a]" />
-            <a href="https://wa.me/62818999771" target="_blank" rel="noopener noreferrer" className="hover:underline">
+            <Phone className="w-5 h-5 mt-1 text-[#1e3a8a] font-open-sans" />
+            <a href="https://wa.me/62818999771" target="_blank" rel="noopener noreferrer" className="hover:underline font-open-sans">
               +6281 8999 771
             </a>
           </div>
 
           <div className="flex items-start gap-3">
             <Mail className="w-5 h-5 mt-1 text-[#1e3a8a]" />
-            <a href="mailto:marketing@beehivedrones.com" className="hover:underline">
+            <a href="mailto:marketing@beehivedrones.com" className="hover:underline font-open-sans">
               marketing@beehivedrones.com
             </a>
           </div>
 
           <div className="flex items-start gap-3 ">
-            <MapPin  className="w-10 h-10 mt-1 text-[#1e3a8a]" />
+            <MapPin  className="w-10 h-10 mt-1 text-[#1e3a8a] font-open-sans" />
             <p>
               Jl. Kalireso No.8, Kumendung, Candibinangun, Kec. Pakem, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55582
             </p>
@@ -153,47 +84,46 @@ function Contact() {
 
           <hr className="border-[#1e3a8a] my-4" />
 
-          <h3 className="font-bold">We are on Socials</h3>
-<div className="grid grid-cols-2 gap-2 text-sm text-gray-800">
-  <a
-    href="https://www.instagram.com/beehivedrones/#"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center gap-2 hover:underline"
-  >
-    <Instagram className="w-5 h-5" />
-    Instagram
-  </a>
-  <a
-    href="https://www.tiktok.com/@beehivedrones"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center gap-2 hover:underline"
-  >
-    <Music2 className="w-5 h-5" />
-    Tiktok
-  </a>
-  <a
-    href="https://www.linkedin.com/company/beehivedrones"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center gap-2 hover:underline"
-  >
-    <Linkedin className="w-5 h-5" />
-    LinkedIn
-  </a>
-  <a
-    href="https://www.youtube.com/@AeroVersumGroup?app=desktop"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center gap-2 hover:underline"
-  >
-    <Youtube className="w-5 h-5" />
-    YouTube
-  </a>
-</div>
-</div>
-
+          <h3 className="font-bold font-open-sans">We are on Socials</h3>
+          <div className="grid grid-cols-2 gap-2 text-sm text-gray-800">
+            <a
+              href="https://www.instagram.com/beehivedrones/#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:underline"
+            >
+              <Instagram className="w-5 h-5" />
+              Instagram
+            </a>
+            <a
+              href="https://www.tiktok.com/@beehivedrones"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:underline"
+            >
+              <Music2 className="w-5 h-5" />
+              Tiktok
+            </a>
+            <a
+              href="https://www.linkedin.com/company/beehivedrones"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:underline"
+            >
+              <Linkedin className="w-5 h-5" />
+              LinkedIn
+            </a>
+            <a
+              href="https://www.youtube.com/@AeroVersumGroup?app=desktop"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:underline"
+            >
+              <Youtube className="w-5 h-5" />
+              YouTube
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -66,7 +66,7 @@ export default function Solutions() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="text-3xl md:text-4xl font-bold text-center text-[#1e3a8a] mb-10"
+        className="text-3xl md:text-4xl font-bold font-exo2 text-center text-[#1e3a8a] mb-10"
       >
         Tailored Solutions for Your Needs
       </motion.h2>
@@ -104,7 +104,7 @@ export default function Solutions() {
               <table className="w-full text-left">
                 <tbody>
                   <tr>
-                    <td className="text-xl mt-30 font-bold text-[#1e3a8a] pb-2">
+                    <td className="text-xl mt-30   font-bold text-[#1e3a8a] pb-2">
                       <motion.div
                         whileHover={{ color: "#134280" }}
                         transition={{ duration: 0.2 }}
@@ -114,7 +114,7 @@ export default function Solutions() {
                     </td>
                   </tr>
                   <tr>
-                    <td className="text-sm text-[#1e3a8a] pb-4">
+                    <td className="text-sm font-open-sans text-[#1e3a8a] pb-4">
                       <motion.div
                         whileHover={{ x: 2 }}
                         transition={{ type: "spring", stiffness: 300 }}
@@ -128,6 +128,20 @@ export default function Solutions() {
             </div>
           </motion.div>
         ))}
+      </div>
+      <div className="flex justify-center mt-10">
+        <motion.a
+          href="/contact-us"
+          whileHover={{
+            scale: 1.05,
+            boxShadow: "0 5px 15px rgba(30, 58, 138, 0.4)",
+          }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+          className="text-sm sm:text-base bg-[#1e3a8a] text-white font-semibold shadow px-5 py-2 sm:px-6 sm:py-3 rounded hover:bg-[#163e7a] transition"
+        >
+          Consult With Us
+        </motion.a>
       </div>
     </section>
   );

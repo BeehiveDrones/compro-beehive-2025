@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import ProductDetailModal from './components/ProductDetailModal';
 import CheckoutModal from './components/CheckoutModal';
 import PaymentMethodModal from './components/PaymentMethodModal';
@@ -24,37 +25,40 @@ export type Product = {
   autonomousMode?: string;
   cameras?: { name: string; description: string }[];
   financingOptions?: string[];
+  include?: string[];
+  videoUrl?: string;
 };
 
-const categories = ['All', 'Surveillance', 'Logistics', 'Mapping'];
+const categories = ['All', 'Surveillance', 'Logistics', 'Mapping','Sprayer'];
 
 const products: Product[] = [
   {
     id: 1,
     name: 'BVD-V25',
     description: 'Best Used for Surveillance, Logistics',
-    price: 'Rp999.999.999',
+    price: 'Rp296.225.000',
     image: '/images/product1.jpg',
     detailImage1: '/images/detilv25.jpg',
     detailImage2: '/images/detilv25.1.jpg',
-    category: 'Surveillance',
-    type: 'VYTOL',
+    category: 'Logistics',
+    type: 'VTOL',
     wingspan: '2400mm',
-    endurance: 'Up To 80 Minutes',
+    endurance: 'Up To 90 Minutes',
     range: 'Up To 90 Km',
-    height: 'Up To 1000 M',
-    autonomousMode: 'TKDN 4.1,19M',
+    height: 'Up To 1000 m',
+    autonomousMode: 'TKDN 41.19 %',
     cameras: [
-      { name: 'Camera 1', description: 'High resolution 4K camera' },
-      { name: 'Camera 2', description: 'Thermal imaging camera' }
+      { name: 'RGB - Night Vision IR Camera', description: '4K & Object Tracking; Laser Night Vision Up To 200m; Zoom Optik 10x & Digital 4x; Gimbal 3-Axis ' },
+      { name: 'RGB & Thermal Camera', description: ' 1080HD - Dual EO & IR Sensor; Rangefinder Up To 300m; Zoom Optik 10x & Digital 32x; Gimbal 3-Axis' }
     ],
-    financingOptions: ['Cash', 'Installment']
+    financingOptions: ['Cash', 'Installment'],
+    include: ['1 set drone ready to fly', 'Baterai & propeller cadangan', 'Box drone', 'Pelatihan']
   },
   {
     id: 2,
     name: 'BVD-F11',
     description: 'Best Used for Mapping and Surveillance',
-    price: 'Rp899.000.000',
+    price: 'Rp77.595.000',
     image: '/images/product2.jpg',
     detailImage1: '/images/detilf11.jpg',
     detailImage2: '/images/detilf11.1.jpg',
@@ -65,17 +69,14 @@ const products: Product[] = [
     range: 'Up To 70 Km',
     height: 'Up To 800 M',
     autonomousMode: 'TKDN 4.0,15M',
-    cameras: [
-      { name: 'Mapping Camera', description: '20MP survey-grade camera' },
-      { name: 'RGB Camera', description: 'Standard color camera' }
-    ],
-    financingOptions: ['Cash', 'Installment']
+    financingOptions: ['Cash', 'Installment'],
+    include: ['1 set drone ready to fly', 'Baterai & propeller cadangan', 'Box drone', 'Pelatihan']
   },
   {
     id: 3,
     name: 'BVD-M16A',
     description: 'Best Used for Inspection and Surveillance',
-    price: 'Rp1.200.000.000',
+    price: 'Rp296.225.000',
     image: '/images/product4.png',
     detailImage1: '/images/detilm16.jpg',
     detailImage2: '/images/detilm16a.jpg',
@@ -86,17 +87,14 @@ const products: Product[] = [
     range: 'Up To 10 Km',
     height: 'Up To 500 M',
     autonomousMode: 'TKDN 4.2,20M',
-    cameras: [
-      { name: 'Zoom Camera', description: '30x optical zoom' },
-      { name: 'Multispectral', description: '5-band sensor' }
-    ],
-    financingOptions: ['Cash', 'Installment']
+    financingOptions: ['Cash', 'Installment'],
+    include: ['Set Airframe ', 'Set Floatter System ', 'Set Motor & Propeller', 'Set Battery', 'Set Controll System', 'Set Telementry dan Data Transmission', 'Set Remote GCS ','Set Kamera','Set Drone Hardcase','Pelatihan']
   },
   {
     id: 4,
     name: 'BVD-V25 Mapping',
     description: 'Best Used for Mapping and Surveillance',
-    price: 'Rp1.500.000.000',
+    price: 'Rp138.287.000',
     image: '/images/product3.jpg',
     detailImage1: '/images/detilv25m.jpg',
     detailImage2: '/images/detilv25map.jpg',
@@ -107,53 +105,28 @@ const products: Product[] = [
     range: 'Up To 100 Km',
     height: 'Up To 1500 M',
     autonomousMode: 'TKDN 4.3,25M',
-    cameras: [
-      { name: 'Cargo Camera', description: 'Cargo monitoring system' }
-    ],
-    financingOptions: ['Cash', 'Lease']
+    financingOptions: ['Cash', 'Lease'],
+    include: ['1 set drone ready to fly', 'Baterai & propeller cadangan', 'Box drone', 'Pelatihan']
   },
   {
     id: 5,
-    name: 'Quadcopter',
+    name: 'Drone Sprayer 16 L',
     description: 'Best Used for Mapping and Surveillance',
-    price: 'Rp1.800.000.000',
-    image: '/images/product5.jpg',
-    detailImage1: '/images/detilf11.jpg',
-    detailImage2: '/images/detilf11.1.jpg',
-    category: 'Mapping',
-    type: 'Fixed Wing',
+    price: 'Rp180.810.000 ',
+    image: '/images/sprayer.png',
+    detailImage1: '/images/detils.jpg',
+    detailImage2: '/images/detils.1.jpg',
+    category: 'Sprayer',
+    type: 'Quadcopter',
     wingspan: '2200mm',
     endurance: 'Up To 90 Minutes',
     range: 'Up To 120 Km',
     height: 'Up To 2000 M',
     autonomousMode: 'TKDN 4.5,30M',
-    cameras: [
-      { name: 'Lidar', description: 'High precision lidar sensor' },
-      { name: 'Survey Camera', description: '42MP full-frame camera' }
-    ],
-    financingOptions: ['Cash', 'Installment']
+    financingOptions: ['Cash', 'Installment'],
+    include: ['1 set drone ready to fly', 'Baterai & propeller cadangan', 'Box drone', 'Pelatihan']
   },
-  {
-    id: 6,
-    name: 'Hexacopter',
-    description: 'Best Used for Mapping and Surveillance',
-    price: 'Rp750.000.000',
-    image: '/images/product6.jpg',
-    detailImage1: '/images/detilf11.jpg',
-    detailImage2: '/images/detilf11.1.jpg',
-    category: 'Surveillance',
-    type: 'Quadcopter',
-    wingspan: 'N/A',
-    endurance: 'Up To 30 Minutes',
-    range: 'Up To 15 Km',
-    height: 'Up To 500 M',
-    autonomousMode: 'TKDN 3.9,12M',
-    cameras: [
-      { name: 'Night Vision', description: 'Low-light capable camera' },
-      { name: 'Wide Angle', description: '180° field of view' }
-    ],
-    financingOptions: ['Cash']
-  }
+
 ];
 
 // ProductItem component definition
@@ -437,7 +410,23 @@ export default function StorePage() {
               </div>
             )}
           </section>
+          
+
         </div>
+      </div>
+      <div className="flex justify-center mt-10">
+        <motion.a
+          href="/contact-us"
+          whileHover={{
+            scale: 1.05,
+            boxShadow: "0 5px 15px rgba(30, 58, 138, 0.4)",
+          }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+          className="text-sm font-exo2 sm:text-base bg-[#1e3a8a] text-white font-semibold shadow px-5 py-2 sm:px-6 sm:py-3 rounded hover:bg-[#163e7a] transition"
+        >
+          Customized Requirments
+        </motion.a>
       </div>
 
       {/* Product Detail Modal */}

@@ -27,7 +27,7 @@ export default function IndustryText() {
     <div className="container mx-auto px-4 text-center mt-16">
       <h2 
         id="industry-text"
-        className={`text-3xl md:text-4xl font-bold text-[#1e3a8a] hover:scale-105 transition-all duration-700 ${
+        className={`text-3xl md:text-4xl font-exo2 font-bold text-[#1e3a8a] hover:scale-105 transition-all duration-700 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >

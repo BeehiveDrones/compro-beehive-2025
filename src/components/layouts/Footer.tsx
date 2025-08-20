@@ -10,8 +10,8 @@ const Footer = () => {
         {/* Navigasi + Sosial Media */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-6">
           {/* Navigasi */}
-          <ul className="flex flex-wrap justify-center md:justify-start gap-4 text-center">
-            <li><Link href="#" className="hover:underline">All Drone</Link></li>
+          <ul className="flex flex-wrap justify-center md:justify-start  gap-4 text-center">
+            <li><Link href="/advance-manufacturing" className="hover:underline font-open-sans">All Drone</Link></li>
             <li><Link href="/about-us" className="hover:underline">About Us</Link></li>
             <li><Link href="/careers" className="hover:underline">Careers</Link></li>
             <li><Link href="/contact-us" className="hover:underline">Contact Us</Link></li>
@@ -19,8 +19,8 @@ const Footer = () => {
           </ul>
 
           {/* Sosial Media */}
-          <div className="flex justify-center md:justify-end gap-6 text-xl">
-            <a href="https://www.instagram.com/beehivedrones" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
+          <div className="flex justify-center md:justify-end gap-6 text-xl ">
+            <a href="https://www.instagram.com/beehivedrones" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 ">
               <i className="bi bi-instagram" />
             </a>
             <a href="https://www.linkedin.com/company/beehivedrones" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
@@ -39,7 +39,7 @@ const Footer = () => {
         <hr className="border-white/30 my-4" />
 
         {/* Kebijakan */}
-        <div className="flex flex-wrap justify-center md:justify-start gap-4 text-center md:text-left mb-6">
+        <div className="flex flex-wrap justify-center md:justify-start gap-4 text-center md:text-left mb-6 font-open-sans">
           <Link href="#">Privacy Policy</Link>
           <span>·</span>
           <Link href="#">Use of Cookies</Link>

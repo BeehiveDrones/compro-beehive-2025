@@ -31,18 +31,18 @@ export default function Rnd() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
         transition={{ duration: 0.5 }}
-        className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-4"
+        className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-4 "
       >
-        R&amp;D Services
+        R&D Services
       </motion.h2>
       
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: isVisible ? 1 : 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="text-sm md:text-base text-[#1e3a8a]"
+        className="text-sm md:text-base text-[#1e3a8a] font-open-sans"
       >
-        At Beehive Drones, we believe that every challenge requires a unique solution. Our R&amp;D services focus on customized innovations,
+        At Beehive Drones, we believe that every challenge requires a unique solution. Our R&D services focus on customized innovations,
         integrating <motion.strong 
           whileHover={{ color: "#134280" }}
           transition={{ duration: 0.2 }}
