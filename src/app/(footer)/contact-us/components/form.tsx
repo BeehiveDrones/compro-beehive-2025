@@ -9,7 +9,7 @@ export type FormFields = {
   email: string;
   address: string;
   requirements: string;
-  time: string; // tambahkan time
+  time: string;
 };
 
 export default function Form() {
@@ -36,12 +36,17 @@ export default function Form() {
     setIsSubmitting(true);
 
     try {
-      const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
-      const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_CONTACT!;
-      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
+      // langsung hardcode ID di sini
+      const serviceID = "service_79nok1g";
+      const templateID = "template_8j5bsiu";
+      const publicKey  = "y7L897lajbS6kuXG8";
 
       // update time setiap submit
-      const formData = { ...form, time: new Date().toLocaleString(), message: form.requirements };
+      const formData = {
+        ...form,
+        time: new Date().toLocaleString(),
+        message: form.requirements,
+      };
 
       await emailjs.send(serviceID, templateID, formData, publicKey);
 

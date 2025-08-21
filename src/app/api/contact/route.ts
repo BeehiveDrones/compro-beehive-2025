@@ -5,17 +5,18 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
+    // langsung hardcode akun Gmail (⚠️ kurang aman untuk production)
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: "youremail@gmail.com",   // ganti dengan email kamu
+        pass: "your_app_password",     // gunakan App Password, bukan password asli Gmail
       },
     });
 
     await transporter.sendMail({
-      from: `"Beehive Drones" <${process.env.EMAIL_USER}>`,
-      to: "tujuan@example.com", // ganti dengan email tujuan contact
+      from: `"Beehive Drones" <youremail@gmail.com>`, // ganti dengan email pengirim
+      to: "tujuan@example.com", // ganti dengan email tujuan
       subject: "Contact Form Submission",
       text: `
         Nama: ${body.name}
@@ -23,6 +24,7 @@ export async function POST(req: Request) {
         Email: ${body.email}
         Address: ${body.address}
         Requirements: ${body.requirements}
+        Waktu: ${body.time}
       `,
     });
 
@@ -30,6 +32,9 @@ export async function POST(req: Request) {
   } catch (err: unknown) {
     console.error("Error kirim email:", err);
     const errorMessage = err instanceof Error ? err.message : "Unknown error";
-    return NextResponse.json({ success: false, error: errorMessage }, { status: 500 });
+    return NextResponse.json(
+      { success: false, error: errorMessage },
+      { status: 500 }
+    );
   }
 }

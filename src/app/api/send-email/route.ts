@@ -4,17 +4,16 @@ import nodemailer from "nodemailer";
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-
     const transporter = nodemailer.createTransport({
-      service: "gmail", // bisa juga pakai "smtp"
+      service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: "yourdemoemail@gmail.com", // ganti dengan email demo
+        pass: "your-app-password", // ganti dengan App Password Gmail
       },
     });
 
     await transporter.sendMail({
-      from: `"Beehive Drones" <${process.env.EMAIL_USER}>`,
+      from: `"Beehive Drones" <yourdemoemail@gmail.com>`,
       to: "tujuan@example.com", // ganti dengan email tujuan
       subject: "Demo Drone Request",
       text: `

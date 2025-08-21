@@ -71,7 +71,7 @@ export default function AboutUs() {
           <CommitmentCard icon="/icons/7.png" title="Perseverance" delay={100} description="We are committed to prioritize customer satisfaction by leveraging effective risk management practices." />
           <CommitmentCard icon="/icons/8.png" title="Quality" delay={200} description="We are commited to strive for excellent quality and continuous improvement of our technology." />
           <CommitmentCard icon="/icons/9.png" title="Safety & Integrity" delay={300} description="We are committed to comply with laws and regulations, prioritizing safety and ethical standards." />
-          <CommitmentCard icon="/icons/10.png" title="Synergy & Innovation" delay={400} description="We are committed to improving performance, implementing Quality Management Systems, and fostering team growth while embracing new challenges." />
+          <CommitmentCard icon="/about/10.png" title="Synergy & Innovation" delay={400} description="We are committed to improving performance, implementing Quality Management Systems, and fostering team growth while embracing new challenges." />
         </div>
       </section>
 
