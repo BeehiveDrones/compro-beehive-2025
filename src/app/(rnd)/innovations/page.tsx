@@ -47,7 +47,7 @@ export default function Home() {
           viewport={{ once: true }}
         >
           <Image
-            src="/Images/polination.png"
+            src="/innovation/polination.png"
             alt="Data Analytics"
             fill
             className="object-cover"
@@ -192,7 +192,7 @@ export default function Home() {
           viewport={{ once: true }}
         >
           <Image
-            src="/Images/auv.png"
+            src="/innovation/auv.png"
             alt="Crop Management"
             fill
             className="object-cover"
