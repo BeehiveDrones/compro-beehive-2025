@@ -39,7 +39,7 @@ export default function Form() {
       // langsung hardcode ID di sini
       const serviceID = "service_79nok1g";
       const templateID = "template_8j5bsiu";
-      const publicKey  = "y7L897lajbS6kuXG8";
+      const publicKey  = "5dip2MVWHLIJt_nYh";
 
       // update time setiap submit
       const formData = {

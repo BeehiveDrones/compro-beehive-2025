@@ -32,7 +32,7 @@ export default function DemoDroneForm() {
       // ✅ langsung hardcode di sini
       const serviceID = "service_79nok1g";
       const templateID = "template_zcp4tjv"; 
-      const publicKey  = "y7L897lajbS6kuXG8";
+      const publicKey  = "5dip2MVWHLIJt_nYh";
 
       const result = await emailjs.send(
         serviceID,
