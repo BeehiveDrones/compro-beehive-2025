@@ -138,7 +138,7 @@ export default function DemoDroneForm() {
             <option value="Spraying Drone">Spraying Drone</option>
             <option value="Inspection Drone">Inspection Drone</option>
             <option value="Surveillance Drone">Surveillance Drone</option>
-            <option value="pollination drone">pollination drone</option>
+            <option value="pollination drone">Pollination Drone</option>
           </select>
         </motion.div>
 

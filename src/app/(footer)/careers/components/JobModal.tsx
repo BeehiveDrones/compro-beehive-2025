@@ -29,9 +29,14 @@ const defaultBenefits = [
 ];
 
 const defaultResponsibilities = [
-  'Assist in user research and wireframe creation.',
-  'Design digital interfaces (web/app) using Figma or Adobe XD.',
-  'Collaborate with developers and product managers.'
+  'Minimum education: Vocational High School (SMK) in any major',
+'Male or female',
+'At least 1 year of experience in procurement or purchasing',
+'Strong negotiation skills and understanding of purchasing procedures',
+'Able to read and understand technical specifications of requested goods/services',
+'Proficient in Microsoft Office (Word, Excel, PowerPoint)',
+'Excellent communication, coordination, and teamwork skills',
+'Honest, detail-oriented, and high integrity',
 ];
 
 const defaultRequirements = [
@@ -99,7 +104,7 @@ export default function JobModal({ job, onClose }: JobModalProps) {
                 </ul>
               </div>
               <div className="mb-4">
-                <span className="font-bold font-exo2">key Responsibilities:</span>
+                <span className="font-bold font-exo2">Key Responsibilities:</span>
                 <ul className="list-disc font-open-sans list-inside text-gray-700 mt-2 space-y-1 text-sm sm:text-base">
                   {requirements.map((item, idx) => (
                     <li key={idx}>{item}</li>
