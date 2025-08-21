@@ -187,7 +187,7 @@ export default function HomePage() {
           // Mengganti `glow-text` dengan `light-streak-text` untuk efek cahaya yang berkelebat.
           className={`text-white text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-bold rounded-lg p-4 font-exo2 animate-pulse-subtle  light-streak-text`}
         >
-          BVD STORE COMMING SOON
+          BVD STORE COMING SOON
         </h1>
       </div>
     </div>

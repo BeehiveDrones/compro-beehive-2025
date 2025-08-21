@@ -64,10 +64,8 @@ export default function HiringSection() {
       shortDescription: 'We’re looking for a detail-oriented and proactive individual to join our team as Procurement Staff',
       fullDescription: 'We are seeking a passionate and driven UI/UX Design Intern to join our dynamic team. This internship offers a unique opportunity to contribute to real-world projects, working alongside experienced designers and developers. You will gain hands-on experience in user research, wireframing, prototyping, and user interface design. We are looking for someone eager to learn, with a strong portfolio showcasing their design skills and a keen eye for detail. This is an excellent opportunity to kickstart your career in product design.',
       requirements: [
-        'BPJS Employment & Health Insurance',
-        'Annual leave and national holidays',
-        'Work-from-home flexibility',
-        '5-day workweek',
+        'Handle purchasing processes and vendor coordination',
+'Ensure timely and cost-effective procurement',
       ],
       Qualification: [
         'Minimum education: Vocational High School (SMK) in any major',
