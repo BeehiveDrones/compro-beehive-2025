@@ -40,7 +40,7 @@ function ProjectsContent() {
         transition={{ type: "spring", stiffness: 400, damping: 17 }}
       >
         <a
-          href="https://wa.me/6281234567890"
+          href="https://wa.me/+62818999771"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp"
