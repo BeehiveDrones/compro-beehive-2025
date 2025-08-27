@@ -477,5 +477,22 @@ export const articles: Article[] = [
     ],
     author: 'Admin Marketing',
   },
+    {
+    id: 21,
+    category: ['Partnership & collaboration', 'Drone Application','Technology & Innovation'],
+    title: 'Enhancing Mining Safety with UAV-Based Displacement Monitoring: PT Studio Mineral Batubara and Beehive Drones Lead Innovation in East Kalimantan',
+    dateUpload: '27 August 2025',
+    images: ['/article/22.png'],
+    content: [
+      '<b>Tabang, East Kalimantan – August 2025 </b> – A breakthrough in geotechnical monitoring was initiated through a collaboration between  <b> PT Studio Mineral Batubara (SMB) and Beehive Drones</b>, working alongside <b>PT Bara Tabang</b> under the supervision of <b> PT Bayan Resources Tbk</b>. The joint initiative focused on testing <b> Unmanned Aerial Vehicle (UAV) </b> technology as a modern solution for displacement monitoring in mining operations.',
+'This program aimed to evaluate how UAV-based monitoring could enhance existing technologies such as Slope Stability Radar (SSR). While SSR remains a highly advanced and reliable tool for real-time displacement monitoring, it has inherent limitations in terms of coverage flexibility and deployment in certain terrains. UAV-based systems address these gaps by offering wide-area coverage, mobility, and high-resolution imagery for pre-identification of critical zones that can later be monitored in detail with SSR.',
+'The trial began with a technical session where the SMB and Beehive Drones teams introduced the concept and methodology of UAV-based displacement monitoring to PT Bara Tabang’s teams. The discussions centered around:',
+'UAV capability in providing dynamic, real-time monitoring.',
+'Challenges posed by dense vegetation and complex terrain along with potential solutions.',
+'The importance of faster data processing to deliver timely insights for decision-making.',
+'The UAV trials alongside the river slope at Panel 2 PT Bara Tabang, covering around 50 hectares, <b> successfully captured high-resolution imagery </b> supported by Ground Control Points (GCPs) for accuracy. Initial results from the first trial <b> indicated pixel-level displacement values, providing early identification of movement within the monitored area. </b> However, further data processing is required to convert these images into measurable displacement models.',
+'The trial demonstrated UAV technology’s strong potential as an innovative and effective complement to radar-based systems, delivering broader coverage and flexibility for early detection. <b> PT Bayan Resources Tbk underscored the importance of conducting additional trials </b> to refine the approach and unlock its full benefits. With successful adoption, UAV-based monitoring can enable faster data acquisition, improved accuracy, and enhanced operational safety—driving the mining industry toward smarter, safer, and more sustainable practices.'],
+    author: 'Admin Marketing',
+  },
 
 ]; 
