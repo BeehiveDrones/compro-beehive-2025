@@ -7,13 +7,13 @@ import 'keen-slider/keen-slider.min.css';
 
 const LOGOS = [
   '/logos/Group 19.png', '/logos/Group 20.png', '/logos/Group 21.png', '/logos/Group 22.png', '/logos/Group 32.png',
-  '/logos/Group 23.png', '/logos/Group 24.png', '/logos/Group 25.png', '/logos/Group 31.png', '/logos/Group 33.png',
+  '/logos/Group 23.png', '/logos/Group 25.png', '/logos/Group 31.png', '/logos/Group 33.png',
   '/logos/Group 26.png', '/logos/Group 27.png', '/logos/Group 28.png', '/logos/Group 29.png', '/logos/Group 30.png',
   '/logos/Group 34.png', '/logos/Group 35.png', '/logos/Group 36.png', '/logos/Group 37.png', '/logos/Group 38.png',
   '/logos/Group 40.png', '/logos/Group 41.png', '/logos/Group 42.png', '/logos/Group 43.png', '/logos/Group 44.png',
   '/logos/Group 45.png', '/logos/Group 46.png', '/logos/Group 47.png', '/logos/Group 48.png', '/logos/Group 63.png',
   '/logos/Group 49.png', '/logos/Group 50.png', '/logos/Group 51.png', '/logos/Group 53.png', '/logos/Group 54.png',
-  '/logos/Group 55.png'
+  '/logos/Group 55.png','/logos/27.png','/logos/28.png','/logos/29.png','/logos/30.png',
 ];
 
 export default function LogoCarousel() {

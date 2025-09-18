@@ -142,4 +142,19 @@ export const projects: Project[] = [
       projectGoal : "To develop skilled operators who can perform accurate mapping, ensure safe drone operations, and support various applications.",
       subCategory: ["Training"],
     },
+        {
+      id: 9,
+      year: "2025",
+      category: "Drone Services, Mining & Minerals",
+      title: "UAV-Based Displacement Monitoring in Coal Mining",
+      projectOverview: "This project explored the use of UAV technology as a complementary tool to enhance displacement monitoring in coal mining operations. UAV-based systems were tested to provide wider coverage, mobility, and high-resolution imagery, supporting existing technologies like Slope Stability Radar (SSR).",
+      image: "/project/10.png",
+      location: "East Kalimantan, Indonesia",
+      desc: [
+        "Product: UAV-Based Displacement Monitoring",
+      ],
+      mainCategory: ["product" , "industri"],
+      projectGoal : "Enhancing operational safety and supporting sustainable coal mining practices through drone technology.",
+      subCategory: ["Drone Services", "Mining & Minerals"],
+    },
   ];
