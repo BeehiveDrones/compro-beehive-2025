@@ -22,6 +22,7 @@ export function ListProject() {
     'Agriculture & Plantations',
     'Mining & Minerals',
     'Construction & Real Estate',
+    'Village Development'
   ];
 
   useEffect(() => {

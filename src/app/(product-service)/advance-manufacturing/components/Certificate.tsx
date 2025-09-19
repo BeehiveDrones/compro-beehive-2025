@@ -1,7 +1,7 @@
-
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Certificate() {
   const items = [
@@ -16,44 +16,43 @@ export default function Certificate() {
       image: "/certificate/tkdn.png",
       title: "41% TKDN Indonesian-Made Drone",
       description:
-        "A producer of logistic and surveillance VTOL drones, with a Domestic Component Level (TKDN) achievement of 41.19%. This achievement reflects a our commitment to strengthening Indonesia’s industrial capabilities, reducing reliance on imports, and contributing to national economic growth. By choosing these drones, users gain not only reliable unmanned aviation technology but also contribute to national self-reliance and the advancement of the manufacturing sector.",
+        "A producer of logistic and surveillance VTOL drones, with a Domestic Component Level (TKDN) achievement of 41.19%. This achievement reflects our commitment to strengthening Indonesia’s industrial capabilities, reducing reliance on imports, and contributing to national economic growth. By choosing these drones, users gain not only reliable unmanned aviation technology but also contribute to national self-reliance and the advancement of the manufacturing sector.",
     },
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 place-items-center">
+    <div className="grid grid-cols-1 gap-10 p-6 xl:grid-cols-2 lg:grid-cols-2 mb-5">
       {items.map((item, idx) => (
-        <div
+        <motion.div
           key={idx}
-          className="relative bg-white/70 backdrop-blur-sm rounded-2xl shadow-md border border-gray-200 
-                     group flex flex-row overflow-hidden transition-all duration-500 
-                     w-[240px] hover:w-[640px] h-[360px]" // tinggi fix mengikuti gambar
+          initial={{ opacity: 0, x: idx % 2 === 0 ? -150 : 150, scale: 0.95 }}
+          whileInView={{ opacity: 1, x: 0, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ amount: 0.3 }}
+          className="flex flex-col xl:flex-row bg-white/80 backdrop-blur-sm 
+                     rounded-2xl shadow-md border border-gray-200 
+                     overflow-hidden w-full max-w-4xl h-auto mx-auto"
         >
-          {/* Bagian kiri: gambar */}
-          <div className="flex-shrink-0">
-            <div className="relative w-[240px] h-[360px]">
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                className="object-contain"
-              />
-            </div>
+          {/* Gambar sertifikat */}
+          <div className="relative w-full h-[240px] md:h-[320px] xl:w-[250px] xl:h-[340px] flex-shrink-0">
+            <Image
+              src={item.image}
+              alt={item.title}
+              fill
+              className="object-contain p-4"
+            />
           </div>
 
-          {/* Bagian kanan: title + deskripsi (hidden dulu, muncul saat hover) */}
-          <div
-            className="w-0 group-hover:w-[380px] opacity-0 group-hover:opacity-100 
-                       bg-white/95 backdrop-blur-sm text-gray-700 text-sm 
-                       flex flex-col items-start justify-start p-4 
-                       transition-all duration-500 overflow-y-auto"
-          >
-            <h3 className="text-blue-600 font-bold text-lg mb-2">
+          {/* Title + Deskripsi */}
+          <div className="flex flex-col justify-start p-4 xl:p-10 text-gray-700">
+            <h3 className="text-blue-600 font-bold text-lg mb-2 text-center xl:text-left ">
               {item.title}
             </h3>
-            <p>{item.description}</p>
+            <p className="text-sm leading-relaxed text-center xl:text-left lg:text-left">
+              {item.description}
+            </p>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

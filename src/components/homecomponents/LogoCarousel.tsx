@@ -16,9 +16,16 @@ const LOGOS = [
   '/logos/Group 55.png','/logos/27.png','/logos/28.png','/logos/29.png','/logos/30.png',
 ];
 
+function getPerView(width: number) {
+  if (width >= 1024) return 10;
+  if (width >= 768) return 8;
+  return 5;
+}
+
 export default function LogoCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const [dotsCount, setDotsCount] = useState(3);
 
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
@@ -48,7 +55,15 @@ export default function LogoCarousel() {
   });
 
   useEffect(() => {
+    function updateDots() {
+      const width = window.innerWidth;
+      const perView = getPerView(width);
+      setDotsCount(Math.max(1, Math.ceil(LOGOS.length / perView)));
+    }
+    updateDots();
+    window.addEventListener('resize', updateDots);
     return () => {
+      window.removeEventListener('resize', updateDots);
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
   }, []);
@@ -57,20 +72,6 @@ export default function LogoCarousel() {
     instanceRef.current?.moveToIdx(slideIndex);
   };
 
-  const getDotsCount = () => {
-    if (typeof window !== 'undefined') {
-      const width = window.innerWidth;
-      const logosLength = LOGOS.length;
-      let perView = 5;
-      if (width >= 1024) perView = 10;
-      else if (width >= 768) perView = 8;
-      return Math.max(1, Math.ceil(logosLength / perView));
-    }
-    return 3;
-  };
-
-  const dotsCount = getDotsCount();
-
   return (
     <div className="container mx-auto px-4 mt-10">
       <div className="flex flex-col items-center">
@@ -78,13 +79,6 @@ export default function LogoCarousel() {
           {LOGOS.map((logo, index) => (
             <div key={index} className="keen-slider__slide flex justify-center items-center">
               <div className="relative w-16 h-16 md:w-20 md:h-20 flex items-center justify-center hover:scale-110 transition-all duration-300 group cursor-pointer">
-                {/* <svg
-                  viewBox="0 0 100 100"
-                  className="absolute inset-0 w-full h-full drop-shadow-md group-hover:drop-shadow-lg transition-all duration-300"
-                  preserveAspectRatio="xMidYMid meet"
-                >
-                  <polygon points="50,5 90,25 90,75 50,95 10,75 10,25" fill="white" className="group-hover:fill-blue-50 transition-colors duration-300" />
-                </svg> */}
                 <Image
                   src={logo}
                   alt={`Logo ${index}`}

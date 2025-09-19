@@ -9,7 +9,6 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-10">
         {/* Navigasi + Sosial Media */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-6">
-          {/* Navigasi */}
           <ul className="flex flex-wrap justify-center md:justify-start gap-4 text-center">
             <li><Link href="/advance-manufacturing" className="hover:underline">All Drone</Link></li>
             <li><Link href="/about-us" className="hover:underline">About Us</Link></li>
@@ -18,7 +17,6 @@ const Footer = () => {
             <li><Link href="/flightsafe" className="hover:underline">Beehive FlightSafe</Link></li>
           </ul>
 
-          {/* Sosial Media */}
           <div className="flex justify-center md:justify-end gap-6 text-xl">
             <a href="https://www.instagram.com/beehivedrones" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
               <i className="bi bi-instagram" />
@@ -37,39 +35,55 @@ const Footer = () => {
 
         <hr className="border-white/30 my-4" />
 
-        {/* Bagian logo dan info */}
-        <div className="grid grid-cols-1 md:grid-cols-3 items-start gap-6 ml-20">
-          {/* Kiri - Logo Beehive & ISO */}
-          <div className="flex items-center justify-center md:justify-start gap-4">
-            <Image src="/images/logo.beehave.1.png" alt="Beehive Logo" width={180} height={40} />
-            <Image src="/images/iso.png" alt="ISO Logo" width={120} height={40} />
+        {/* Bagian logo dan info - grid 5 kolom pada md+ */}
+        <div className="grid grid-cols-1 md:grid-cols-5 items-start gap-6">
+          {/* Kiri - Logo Beehive & ISO (col 1) */}
+<div className="flex items-center justify-center md:justify-start  -mt-6">
+  <Image 
+    src="/images/logo.beehave.1.png" 
+    alt="Beehive Logo" 
+    width={230} 
+    height={40} 
+    className="-mt-3" 
+  />
+  <Image 
+    src="/images/iso.png" 
+    alt="ISO Logo" 
+    width={140} 
+    height={40} 
+    className="-mt-7" 
+  />
+</div>
+
+
+          {/* About Us (col 2) */}
+          <div className="md:col-span-2 text-center md:text-left ml-30 mt-5">
+            <h3 className="font-semibold text-xl mb-2">About Us</h3>
+            <div className="text-sm leading-relaxed">
+              <p>PT. Aerotek Global Inovasi (Beehive Drones) is a drone system</p>
+              <p>provider company that focuses on R&amp;D and implementation of</p>
+              <p>drone technology in conventional industries.</p>
+            </div>
           </div>
 
-          {/* Tengah - About & Contacts dibagi 2 kolom */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-center md:text-left mt-10">
-            <div>
-              <h3 className="font-semibold">About Us</h3>
-              <p className="text-xs mt-2">
-                PT. Lumbung Muncul Sejahtera is a data analytics and natural resources
-                management company with a sustainable orientation.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold">Contacts</h3>
-              <p className="text-xs mt-2">Email: marketing@lumbungmuncul.com</p>
-              <p className="text-xs">Whatsapp: +62 818-999-771</p>
-              <p className="text-xs">Jl. Kalireso No.8, Yogyakarta 55582</p>
+          {/* Contacts (col 1) */}
+          <div className="md:col-span-1 text-center md:text-left mt-5">
+            <h3 className="font-semibold text-xl mb-2">Contacts</h3>
+            <div className="text-sm leading-relaxed">
+              <p>Email: marketing@beehivedrones.com</p>
+              <p>Whatsapp: +62 818-999-771</p>
+              <p>Jl. Kalireso No.8, Yogyakarta 55582</p>
             </div>
           </div>
 
-          {/* Kanan - Logo AeroVersum */}
-          <div className="flex justify-center md:justify-end mr-20">
-            <Image src="/images/logo.aeroversum.beehave.png" alt="AeroVersum Logo" width={180} height={60} />
+          {/* Kanan - Logo AeroVersum (col 1) */}
+          <div className="md:col-span-1 flex justify-center md:justify-end items-center">
+            <Image src="/images/logo.aeroversum.beehave.png" alt="AeroVersum Logo" width={200} height={60} />
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="text-center text-xs mt-6">
+        <div className="text-center text-xs mt-">
           <small>&copy; 2025 Beehive Drones. All Rights Reserved.</small>
         </div>
       </div>
