@@ -494,5 +494,35 @@ export const articles: Article[] = [
 'The trial demonstrated UAV technology’s strong potential as an innovative and effective complement to radar-based systems, delivering broader coverage and flexibility for early detection. <b> PT Bayan Resources Tbk underscored the importance of conducting additional trials </b> to refine the approach and unlock its full benefits. With successful adoption, UAV-based monitoring can enable faster data acquisition, improved accuracy, and enhanced operational safety—driving the mining industry toward smarter, safer, and more sustainable practices.'],
     author: 'Admin Marketing',
   },
+  {
+    id: 22,
+    category: ['Partnership & collaboration'],
+    title: 'Digital Generation: Shaping the Future of the Palm Oil Industry',
+    dateUpload: '19 September 2025',
+    images: ['/article/23.png'],
+    content: [
+      'On <b>Tuesday, September 16, 2025 </b>, Beehive Drones had the opportunity to take part in the Talkshow on Digitalization & Industrial Revolution during the<b> Orientation Program for New Students (PKKMB)<b/> at <b> Politeknik LPP Yogyakarta.</b>',
+'In this session, our Chief Marketing Officer, <b> Prima Mandana </b>, delivered a presentation titled “Digital Generation: Shaping the Future of the Palm Oil Industry”. The talk was attended by more than <b> 566 students, lecturers, and organizers </b>, reflecting Politeknik LPP’s strong commitment to preparing the next generation of skilled professionals for the plantation and agribusiness sector.',
+'<b> Inspiring the Next Generation </b>',
+'The discussion focused on how digital transformation is no longer just an option, but a necessity in the palm oil industry. From data-driven monitoring, drone-based solutions, and data analytics, technology can empower young professionals to rethink how plantations are managed—making them more <b> efficient, transparent, and sustainable.</b>',
+'As stated by Prima Mandana  during the session:',
+' <b> “Digitalization means transforming plantations into data-driven operations that are more transparent and accountable.” </b>',
+'<b> Collaboration Between Academia and Industry </b>',
+'Events like this highlight the importance of collaboration between academia and industry. By sharing real-world insights with students, we aim to bridge the gap between classroom learning and industry application, ensuring that the next generation is ready to embrace the challenges and opportunities ahead.',
+'At Beehive Drones, we believe that innovation thrives when knowledge is shared. Engaging with future professionals not only helps shape their vision but also inspires us to continue pushing boundaries in the field of agricultural technology.',
+'Together, let’s build a more <b> sustainable and forward-looking palm oil industry. </b> 🌱✨',],
+    author: 'Admin Marketing',
+  },
+  {
+    id: 23,
+    category: ['Partnership & collaboration','Events & Projects'],
+    title: 'Beehive Drones Showcases BVD-V25 Drone for Oil Palm Surveillance and Security Solutions at Bintalfisdisbun AKPY',
+    dateUpload: '19 September 2025',
+    images: ['/article/24.png'],
+    content: [
+      'Ungaran, September 16, 2025 — Beehive Drones, in collaboration with AKPY, presented its flagship <b> BVD-V25 </b> drone during the Bintalfisdisbun (Orientation Program for New Students) at SEAT Official (Stiper Edu Agro Tourism). The drone, designed for advanced oil palm monitoring and security, was prominently displayed as part of the event’s technology showcase. As part of the event, the Beehive Drones team conducted a <b> live flight demonstration </b> of the BVD-V25, providing real-time POV (point of view) footage from the drone during surveillance operations. This session gave the entire batch of new students a first-hand look at how drone technology is transforming oil palm plantation management. In addition to the live demo, the displayed drone and other technological solutions were introduced and explained to invited guests, including representatives from palm oil companies, stakeholders, and industry partners. The event highlighted the role of drone innovation in supporting efficiency, sustainability, and enhanced security within the plantation sector. This collaboration between industry and academia reflects a shared commitment to preparing the next generation of agro-industry leaders while accelerating the adoption of cutting-edge technologies in the plantation sector. By bridging practical innovation with academic learning, Beehive Drones and AKPY aim to strengthen sustainable practices and create greater impact across the agricultural ecosystem.',],
+    author: 'Admin Marketing',
+  },
+
 
 ]; 
