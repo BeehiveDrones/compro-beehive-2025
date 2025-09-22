@@ -74,31 +74,29 @@ const Footer = () => {
         </div>
 
         <hr className="border-white/30 my-4" />
-
-        {/* Bagian logo dan info - grid 5 kolom pada md+ */}
         <div className="grid grid-cols-1 md:grid-cols-5 items-start gap-6">
           {/* Kiri - Logo Beehive & ISO (col 1) */}
-          <div className="flex items-center justify-center md:justify-start -mt-6">
+          <div className="flex items-center justify-center xl:justify-start xl:-mt-6 md:mt-9 ">
             <Image
               src="/images/logo.beehave.1.png"
               alt="Beehive Logo"
-              width={230}
+              width={150}
               height={40}
-              className="-mt-3"
+              className="-mt-3 xl:w-[230] xl:h-[220] md:w-[150] md:h-[100] lg:mt-10 xl:-mt-6"
             />
             <Image
               src="/images/iso.png"
               alt="ISO Logo"
-              width={140}
+              width={100}
               height={40}
-              className="-mt-7"
+              className="-mt-7 xl:w-[150] xl:h-[90] md:w-[100] md:h-[60] lg:mt-5 xl:-mt-6"
             />
           </div>
 
           {/* About Us (col 2-3) */}
-          <div className="md:col-span-2 text-center md:text-left mt-5 ml-30">
-            <h3 className="font-semibold text-xl mb-2">About Us</h3>
-            <div className="text-sm leading-relaxed">
+          <div className=" md:col-span-2 xl:col-span-2 xl:text-left xl:mt-5 xl:ml-30 text-left md:ml-5 ">
+            <h3 className="font-semibold text-sm sm:text-base md:text-md xl:text-xl mb-2 md:text-[20px]"> About Us </h3>
+            <div className="xl:text-sm leading-relaxed md:text-[10px]">
               <p>
                 PT. Aerotek Global Inovasi (Beehive Drones) is a drone system
               </p>
@@ -110,9 +108,9 @@ const Footer = () => {
           </div>
 
           {/* Contacts (col 4) */}
-          <div className="text-left mt-5 md:ml-9">
-            <h3 className="font-semibold text-xl mb-2">Contacts</h3>
-            <div className="text-sm leading-relaxed space-y-1">
+          <div className="font-semibold text-sm sm:text-base md:text-md xl:text-xl xl:mt-5 ">
+            <h3 className="font-semibold text-sm sm:text-base md:text-md xl:text-xl mb-2 md:text-[20px]">Contacts</h3>
+            <div className="text-sm leading-relaxed space-y-1 md:text-[8px] xl:text-sm">
               <p className="whitespace-nowrap">
                 Email: marketing@beehivedrones.com
               </p>
@@ -123,7 +121,7 @@ const Footer = () => {
           </div>
 
           {/* Kanan - Logo AeroVersum (col 5) */}
-          <div className="md:col-span-1 flex justify-center md:justify-end items-center -mt-5">
+          <div className="xl:col-span-1 flex justify-center xl:justify-end items-center xl:-mt-5 md:mt-2 ">
             <Image
               src="/images/logo.aeroversum.beehave.png"
               alt="AeroVersum Logo"
