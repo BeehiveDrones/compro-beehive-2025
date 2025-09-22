@@ -117,7 +117,7 @@ const Footer = () => {
       Email: marketing@beehivedrones.com
     </p>
     <p className="whitespace-nowrap">Whatsapp: +62 818-999-771</p>
-    <p>Jl. Kalireso No.8 Yogyakarta 55582</p>
+    <p>Jl. Kalireso No.8 Yogyakarta</p>
   </div>
 </div>
 
@@ -129,14 +129,14 @@ const Footer = () => {
               alt="AeroVersum Logo"
               width={200}
               height={60}
-              className="-mt-7 xl:w-[250] xl:h-[190] md:w-[160] md:h-[140] xl:mb-[21px]   "
+              className="-mt-4 xl:w-[250] xl:h-[190] md:w-[160] md:h-[140] xl:mb-[21px]   "
 
             />
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="text-center text-xs mt-4">
+        <div className="text-center text-xs -mt-10">
           <small>&copy; 2025 Beehive Drones. All Rights Reserved.</small>
         </div>
       </div>
