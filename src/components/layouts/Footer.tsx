@@ -74,22 +74,22 @@ const Footer = () => {
         </div>
 
         <hr className="border-white/30 my-4" />
-        <div className="grid grid-cols-1 md:grid-cols-5 items-start gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-5 items-start gap-6 ">
           {/* Kiri - Logo Beehive & ISO (col 1) */}
-          <div className="flex items-center justify-center xl:justify-start xl:-mt-6 md:mt-9 ">
+          <div className="flex items-center justify-center xl:justify-start xl:-mt-2 md:mt-9 lg:justify-start lg:mt-5 ">
             <Image
               src="/images/logo.beehave.1.png"
               alt="Beehive Logo"
               width={150}
               height={40}
-              className="-mt-3 xl:w-[230] xl:h-[220] md:w-[150] md:h-[100] lg:mt-10 xl:-mt-6"
+              className="-mt-3 xl:w-[230] xl:h-[220] md:w-[150] md:h-[100] "
             />
             <Image
               src="/images/iso.png"
               alt="ISO Logo"
               width={100}
               height={40}
-              className="-mt-7 xl:w-[150] xl:h-[90] md:w-[100] md:h-[60] lg:mt-5 xl:-mt-6"
+              className="-mt-7 xl:w-[150] xl:h-[90] md:w-[100] md:h-[60] "
             />
           </div>
 
@@ -121,7 +121,7 @@ const Footer = () => {
           </div>
 
           {/* Kanan - Logo AeroVersum (col 5) */}
-          <div className="xl:col-span-1 flex justify-center xl:justify-end items-center xl:-mt-5 md:mt-2 ">
+          <div className="xl:col-span-1 flex justify-center xl:justify-end lg:justify-end items-center  ">
             <Image
               src="/images/logo.aeroversum.beehave.png"
               alt="AeroVersum Logo"
