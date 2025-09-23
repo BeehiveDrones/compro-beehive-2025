@@ -82,21 +82,21 @@ const Footer = () => {
               alt="Beehive Logo"
               width={80}
               height={40}
-              className="-mt-3 xl:w-[110] xl:h-[90] md:w-[100] md:h-[70] xl:mt-2 "
+              className="-mt-3 xl:w-[110px] xl:h-[90px] md:w-[100px] md:h-[70px] xl:mt-2 "
             />
             <Image
               src="/images/iso.png"
               alt="ISO Logo"
               width={100}
               height={40}
-              className="-mt-7 xl:w-[150] xl:h-[90] md:w-[100] md:h-[60] xl:mt-2  md:mt-[1px] "
+              className="-mt-7 xl:w-[150px] xl:h-[90px] md:w-[100px] md:h-[60px] xl:mt-2  md:mt-[1px] "
             />
           </div>
 
           {/* About Us (col 2-3) */}
           <div className=" md:col-span-2 xl:col-span-2 xl:text-left xl:mt-5 xl:ml-2 text-left md:ml-2 2xl:ml-8 ">
             <h3 className="font-semibold text-sm sm:text-base md:text-md xl:text-xl mb-2 md:text-[20px]"> About Us </h3>
-            <div className="xl:text-sm leading-relaxed md:text-[10px]">
+            <div className="xl:text-sm leading-relaxed md:text-[8px]">
               <p>
                 PT. Aerotek Global Inovasi (Beehive Drones) is a drone system
               </p>
@@ -107,20 +107,19 @@ const Footer = () => {
             </div>
           </div>
 
-{/* Contacts (col 4) */}
-<div className="text-sm sm:text-base md:text-md xl:text-xl xl:mt-5 md:mr-5 xl:ml-[-20px]">
-  <h3 className="font-semibold text-sm sm:text-base md:text-md xl:text-xl mb-2 md:text-[20px]">
-    Contacts
-  </h3>
-  <div className="text-sm space-y-1 md:text-[8px] xl:text-sm">
-    <p className="whitespace-nowrap">
-      Email: marketing@beehivedrones.com
-    </p>
-    <p className="whitespace-nowrap">Whatsapp: +62 818-999-771</p>
-    <p>Jl. Kalireso No.8 Yogyakarta</p>
-  </div>
-</div>
-
+          {/* Contacts (col 4) */}
+          <div className="text-sm sm:text-base md:text-md xl:text-xl xl:mt-5 md:mr-5 xl:ml-[-20px]">
+            <h3 className="font-semibold text-sm sm:text-base md:text-md xl:text-xl mb-2 md:text-[20px]">
+              Contacts
+            </h3>
+            <div className="text-sm space-y-1 md:text-[7px] xl:text-sm">
+              <p className="whitespace-nowrap">
+                Email: marketing@beehivedrones.com
+              </p>
+              <p className="whitespace-nowrap">Whatsapp: +62 818-999-771</p>
+              <p>Jl. Kalireso No.8 Yogyakarta</p>
+            </div>
+          </div>
 
           {/* Kanan - Logo AeroVersum (col 5) */}
           <div className=" justify-center md:justify-end flex xl:justify-end xl:mt-5 lg:justify-end ">
@@ -129,14 +128,13 @@ const Footer = () => {
               alt="AeroVersum Logo"
               width={200}
               height={60}
-              className="-mt-4 xl:w-[250] xl:h-[190] md:w-[160] md:h-[140] xl:mb-[21px]   "
-
+              className="-mt-4 xl:w-[250px] xl:h-[190px] md:w-[160px] md:h-[140px] xl:mb-[21px]   "
             />
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="text-center text-xs -mt-10">
+        <div className="text-center text-xs xl:-mt-18 md:-mt-5">
           <small>&copy; 2025 Beehive Drones. All Rights Reserved.</small>
         </div>
       </div>
