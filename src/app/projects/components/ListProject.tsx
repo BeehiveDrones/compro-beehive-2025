@@ -104,11 +104,10 @@ export function ListProject() {
           {productSubs.map(sub => (
             <button
               key={sub}
-              className={`px-3 sm:px-4 md:px-5 py-2 rounded font-semibold font-open-sans border border-[#134280] transition text-xs sm:text-sm md:text-base ${
-                subSelected === sub
-                  ? 'bg-[#134280] text-white'
-                  : 'bg-white text-[#134280] hover:bg-[#134280] hover:text-white'
-              }`}
+              className={`px-3 sm:px-4 md:px-5 py-2 rounded font-semibold font-open-sans border border-[#134280] transition text-xs sm:text-sm md:text-base ${subSelected === sub
+                ? 'bg-[#134280] text-white'
+                : 'bg-white text-[#134280] hover:bg-[#134280] hover:text-white'
+                }`}
               onClick={() => setSubSelected(sub)}
             >
               {sub}
@@ -123,11 +122,10 @@ export function ListProject() {
           {industriSubs.map(sub => (
             <button
               key={sub}
-              className={`px-3 sm:px-4 md:px-5 py-2 rounded font-semibold font-open-sans border border-[#134280] transition text-xs sm:text-sm md:text-base ${
-                subSelected === sub
-                  ? 'bg-[#134280] text-white'
-                  : 'bg-white text-[#134280] hover:bg-[#134280] hover:text-white'
-              }`}
+              className={`px-3 sm:px-4 md:px-5 py-2 rounded font-semibold font-open-sans border border-[#134280] transition text-xs sm:text-sm md:text-base ${subSelected === sub
+                ? 'bg-[#134280] text-white'
+                : 'bg-white text-[#134280] hover:bg-[#134280] hover:text-white'
+                }`}
               onClick={() => setSubSelected(sub)}
             >
               {sub}
@@ -137,17 +135,18 @@ export function ListProject() {
       )}
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6 mt-6 sm:mt-8">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6 mt-6 sm:mt-8 items-stretch">
         {sortedProjects.map((project, index) => (
           <motion.div
-            key={project.id} // gunakan id biar unik
+            key={project.id}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true, margin: '-50px' }}
             whileHover={{ y: -5, boxShadow: '0 10px 25px rgba(0,0,0,0.1)' }}
-            className="bg-white shadow-md overflow-hidden flex flex-col min-h-[280px] sm:min-h-[320px] rounded-lg"
+            className="bg-white shadow-md overflow-hidden flex flex-col rounded-lg h-full"
           >
+            {/* Gambar */}
             <motion.div
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.3 }}
@@ -161,66 +160,62 @@ export function ListProject() {
                 className="rounded-2xl mx-auto mt-2 sm:mt-4 object-cover w-[calc(100%-16px)] sm:w-full h-24 sm:h-60"
               />
             </motion.div>
-            
-            <div className="p-2 sm:p-4 flex flex-col justify-between flex-grow font-open-sans">
-              <motion.div 
-                whileHover={{ x: 3 }}
-                transition={{ type: 'spring', stiffness: 300 }}
-                className="text-gray-500 text-[10px] sm:text-xs mb-1 flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-0"
-              >
-                <span className="truncate">
-                  {project.location}
-                </span>
-                <span className="text-right sm:text-left">{project.year}</span>
-              </motion.div>
 
-              <div className="text-gray-500 text-[10px] sm:text-xs mb-1 font-open-sans">
-                {Array.isArray(project.category) ? project.category.join(', ') : project.category}
+            {/* Isi Card */}
+            <div className="p-2 sm:p-4 flex flex-col flex-grow font-open-sans">
+              <div className="space-y-0.5 font-open-sans min-h-[40px]">
+                <motion.div
+                  whileHover={{ x: 3 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                  className="flex justify-between items-center text-gray-500 text-[10px] sm:text-xs leading-tight"
+                >
+                  <span className="truncate">{project.location}</span>
+                  <span>{project.year}</span>
+                </motion.div>
+
+                <div className="text-gray-500 text-[10px] sm:text-xs leading-tight">
+                  {Array.isArray(project.category)
+                    ? project.category.join(', ')
+                    : project.category}
+                </div>
               </div>
-              
-              <motion.h3 
+
+              {/* Judul */}
+              <motion.h3
                 whileHover={{ color: '#134280' }}
                 transition={{ duration: 0.2 }}
-                className="text-[#1e3a8a] font-bold text-sm sm:text-2xl mt-2 sm:mt-10 leading-tight"
+                className="text-[#1e3a8a] font-bold text-sm sm:text-2xl mt-2 leading-tight min-h-[56px]"
               >
                 {project.title}
               </motion.h3>
-              
+
+              {/* Overview */}
               {project.projectOverview && (
-                <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-gray-600 font-open-sans line-clamp-3 sm:line-clamp-none">
+                <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-gray-600 font-open-sans">
                   {project.projectOverview}
                 </p>
               )}
-              
-              {project.desc && (
-                <>
-                  <ul className="mt-1 sm:mt-2 mb-1 sm:mb-2 text-xs sm:text-sm text-black list-disc list-inside space-y-1 font-open-sans">
-                    {project.desc.map((item, idx) => (
-                      <li key={idx}>{item}</li>
-                    ))}
-                  </ul>
 
-                  {project.projectGoal && (
-                    <div className="flex items-start gap-2 mt-2 sm:mt-4">
-                      <svg
-                        className="w-4 h-4 sm:w-6 sm:h-6 text-blue-600 flex-shrink-0 mt-0.5"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <circle cx="12" cy="12" r="10" />
-                        <circle cx="12" cy="12" r="6" />
-                        <circle cx="12" cy="12" r="2" fill="currentColor" />
-                      </svg>
+              {/* Goal */}
+              {project.projectGoal && (
+                <div className="flex items-start gap-2 mt-2 sm:mt-4">
+                  <svg
+                    className="w-4 h-4 sm:w-6 sm:h-6 text-blue-600 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <circle cx="12" cy="12" r="6" />
+                    <circle cx="12" cy="12" r="2" fill="currentColor" />
+                  </svg>
 
-                      <p className="text-xs sm:text-sm text-gray-700 font-open-sans ">
-                        {project.projectGoal}
-                      </p>
-                    </div>
-                  )}
-                </>
+                  <p className="text-xs sm:text-sm text-gray-700 font-open-sans">
+                    {project.projectGoal}
+                  </p>
+                </div>
               )}
             </div>
           </motion.div>
