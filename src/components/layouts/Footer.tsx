@@ -123,7 +123,7 @@ const Footer = () => {
 
           {/* Kanan - Logo AeroVersum (col 5) */}
           < div className="justify-center md:justify-end flex xl:justify-end xl:mt-5 lg:justify-end">
-            <Link href="https://www.lumbungmuncul.com" target="_blank" rel="noopener noreferrer">
+            <Link href="http://lumbungmuncul.com/" target="_blank" rel="noopener noreferrer">
               <Image
                 src="/images/logo.aeroversum.beehave.png"
                 alt="AeroVersum Logo"
