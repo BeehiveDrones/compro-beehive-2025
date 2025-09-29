@@ -21,19 +21,19 @@ export default function AboutUs() {
             <AnimatedSection delay={100}>
               <h2 className="text-3xl font-bold text-[#1e3a8a] mb-3 font-exo2">Our Journey</h2>
               <p className="text-gray-700 leading-relaxed mb-4 text-justify font-open-sans">
-                Beehive Drones was founded in 2017 by a group of Indonesian students in Manchester, UK, aiming to bring drone power to conventional industries. Today, we provide drone systems, IoT sensors, surveillance, and mapping management. Our swarm drone tech made us a world finalist in Microsoft s 2018 Imagine Cup.
+                Established in 2018 in Yogyakarta, PT. Aerotek Global Inovasi (Beehive Drones), part of Aero Versum Group, has been a pioneer in providing drone systems and data analysis, with a strong focus on R&D and the application of advanced technologies such as drones, robotics, big data, computer vision, and AI in conventional industries.
               </p>
             </AnimatedSection>
             <AnimatedSection delay={200}>
               <p className="text-gray-700 leading-relaxed mb-4 text-justify font-open-sans">
-                Officially registered in Indonesia as PT Aerotek Global Inovasi, we partner with private and government sectors to deliver reliable and affordable aerial technologies.
+                Starting from a Microsoft competition in Seattle, USA, where they represented Indonesia, Beehive Drones has continued to achieve milestones and realize its vision to advance the drone, robotics, and AI industries in the country, while also bringing innovative solutions to the global market.
               </p>
             </AnimatedSection>
-            <AnimatedSection delay={300}>
+            {/* <AnimatedSection delay={300}>
               <p className="text-gray-700 leading-relaxed text-justify font-open-sans">
                 With the motto REDEFINING THE POSSIBILITIES, we aim to assist industries in embracing modern tech and becoming a trusted partner in Industry 4.0.
               </p>
-            </AnimatedSection>
+            </AnimatedSection> */}
           </div>
 
           <div
