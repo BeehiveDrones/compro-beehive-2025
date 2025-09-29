@@ -19,7 +19,7 @@ export default function HeroSection() {
           className="w-full"
         >
           <Image
-            src="/images/product & service.jpg"
+            src="/images/product&service.jpg"
             alt="halaman drone service"
             width={1600}
             height={900}
