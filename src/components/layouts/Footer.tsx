@@ -122,14 +122,16 @@ const Footer = () => {
           </div>
 
           {/* Kanan - Logo AeroVersum (col 5) */}
-          <div className=" justify-center md:justify-end flex xl:justify-end xl:mt-5 lg:justify-end ">
-            <Image
-              src="/images/logo.aeroversum.beehave.png"
-              alt="AeroVersum Logo"
-              width={200}
-              height={60}
-              className="-mt-4 xl:w-[250px] xl:h-[190px] md:w-[160px] md:h-[140px] xl:mb-[21px]   "
-            />
+          < div className="justify-center md:justify-end flex xl:justify-end xl:mt-5 lg:justify-end">
+            <Link href="https://www.lumbungmuncul.com" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/images/logo.aeroversum.beehave.png"
+                alt="AeroVersum Logo"
+                width={200}
+                height={60}
+                className="-mt-4 xl:w-[250px] xl:h-[190px] md:w-[160px] md:h-[140px] xl:mb-[21px]"
+              />
+            </Link>
           </div>
         </div>
 
@@ -138,7 +140,7 @@ const Footer = () => {
           <small>&copy; 2025 Beehive Drones. All Rights Reserved.</small>
         </div>
       </div>
-    </footer>
+    </footer >
   );
 };
 
